@@ -10,7 +10,6 @@ import SwiftUI
 struct ProfileView: View {
     @State var isSettingsIconTapped = false
     var body: some View {
-        ScrollView {
             NavigationView {
                     List {
                         VStack(alignment: .leading, spacing: 5) {
@@ -98,11 +97,11 @@ struct ProfileView: View {
                         }
                     }
                 }.background(
-                    NavigationLink(destination: SettingsView().edgesIgnoringSafeArea(.all),
-                            isActive: $isSettingsIconTapped) {EmptyView()}
+                    NavigationLink(destination: SettingsView(),
+                            isActive: $isSettingsIconTapped) {}
                 )
             }
-        }
+        
     }
     private func presentSettings() {
         self.isSettingsIconTapped = true
