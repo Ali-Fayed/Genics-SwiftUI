@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  ReposView.swift
 //  Genics
 //
 //  Created by Ali Fixed on 19/10/2022.
@@ -7,18 +7,16 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct ReposView: View {
     var body: some View {
-        NavigationView {
             Text("Hello, World!")
                 .padding()
-                .navigationTitle(Titles.homeViewTitle)
-        }
+                .navigationTitle(Titles.repositoriesViewTitle)
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct ReposView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ReposView()
     }
 }

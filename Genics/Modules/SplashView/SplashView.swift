@@ -9,7 +9,6 @@ import SwiftUI
 import CoreData
 
 struct SplashView: View {
-    var isLoggedIn = false
     @State var isPresentingLoginView = false
     @State var isPresentingHomeView = false
     var body: some View {
@@ -19,7 +18,7 @@ struct SplashView: View {
             LottieView(lottieFile: "loadingspinner")
                 .frame(width: 140, height: 140)
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         if !isLoggedIn {
                             self.isPresentingLoginView = true
                         } else {
@@ -35,7 +34,7 @@ struct SplashView: View {
                 .fullScreenCover(isPresented: $isPresentingHomeView, onDismiss: {
                     print("TabBarDismissed")
                 }, content: {
-                    HomeView().edgesIgnoringSafeArea(.all)
+                    TabBarView().edgesIgnoringSafeArea(.all)
                 })
         }
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var isSettingsIconTapped = false
     var body: some View {
         NavigationView {
             Text("Hello, World!")
@@ -19,11 +20,14 @@ struct ProfileView: View {
                             Label("", systemImage: "gearshape")
                         }
                     }
-                }
+                }.background(
+                    NavigationLink(destination: SettingsView().edgesIgnoringSafeArea(.all),
+                            isActive: $isSettingsIconTapped) {EmptyView()}
+                )
         }
     }
     private func presentSettings() {
-       
+        self.isSettingsIconTapped = true
     }
 }
 

@@ -13,3 +13,9 @@ struct AppConstants {
 [Terms of use](https://docs.github.com/en/github/site-policy/github-terms-of-service) and [Privacy Policy](https://docs.github.com/en/github/site-policy/github-privacy-statement).
 """
 }
+var isLoggedIn: Bool {
+    if TokenManager.shared.fetchAccessToken() != nil {
+        return true
+    }
+    return false
+}
