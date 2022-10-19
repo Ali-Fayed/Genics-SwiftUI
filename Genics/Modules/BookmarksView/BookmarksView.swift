@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct BookmarksView: View {
+    @State var searchText = ""
     var body: some View {
         NavigationView {
-            Text("Hello, World!")
-                .padding()
-                .navigationTitle(Titles.bookmarksViewTitle)
-        }
+            List {
+                Section {
+                    UsersListCell(userName: "Ali", userAvatar: "ali")
+                } header: {
+                    Text("Users")
+                }
+                Section {
+                    ReposListCell(userAvatar: "ali", userName: "Ali", repoName: "Alamofire", repoDescription: "asljndjksandjksandjkasndas", repoStarsCount: "12334", repoLanguage: "Swift", repoLanguageCircleColor: "red")
+                } header: {
+                    Text("Repositories")
+                }
+            }.navigationTitle(Titles.bookmarksViewTitle)
+        }.searchable(text: $searchText, prompt: "Search Bookmarks")
     }
 }
 
