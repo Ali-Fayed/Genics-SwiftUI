@@ -62,6 +62,11 @@
 		68AF3D9129006AA400C49B94 /* OrgsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9029006AA400C49B94 /* OrgsModel.swift */; };
 		68AF3D9329006AAA00C49B94 /* OrgsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9229006AAA00C49B94 /* OrgsViewModel.swift */; };
 		68AF3D9629006BA200C49B94 /* UsersDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9529006BA200C49B94 /* UsersDetailsView.swift */; };
+		68AF3D98290076FE00C49B94 /* ReposCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D97290076FE00C49B94 /* ReposCell.swift */; };
+		68AF3D9A290077B500C49B94 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D99290077B500C49B94 /* UsersCell.swift */; };
+		68AF3D9E2900789900C49B94 /* ReposDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9D2900789900C49B94 /* ReposDetails.swift */; };
+		68AF3DA0290078CC00C49B94 /* OrgsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9F290078CC00C49B94 /* OrgsCell.swift */; };
+		68AF3DA32900795F00C49B94 /* StarredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3DA22900795F00C49B94 /* StarredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +145,11 @@
 		68AF3D9029006AA400C49B94 /* OrgsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsModel.swift; sourceTree = "<group>"; };
 		68AF3D9229006AAA00C49B94 /* OrgsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsViewModel.swift; sourceTree = "<group>"; };
 		68AF3D9529006BA200C49B94 /* UsersDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDetailsView.swift; sourceTree = "<group>"; };
+		68AF3D97290076FE00C49B94 /* ReposCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposCell.swift; sourceTree = "<group>"; };
+		68AF3D99290077B500C49B94 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
+		68AF3D9D2900789900C49B94 /* ReposDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDetails.swift; sourceTree = "<group>"; };
+		68AF3D9F290078CC00C49B94 /* OrgsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsCell.swift; sourceTree = "<group>"; };
+		68AF3DA22900795F00C49B94 /* StarredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +399,9 @@
 		68AF3D5E29003E7F00C49B94 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				68AF3DA12900795400C49B94 /* StarredView */,
+				68AF3D9C2900788E00C49B94 /* ReposDetails */,
+				68AF3D9B290077C700C49B94 /* CommonViews */,
 				68AF3D9429006B9000C49B94 /* UsersDetailsView */,
 				68AF3D6429003FFD00C49B94 /* ExploreView */,
 				68AF3D6329003FF600C49B94 /* BookmarksView */,
@@ -510,6 +523,32 @@
 				68AF3D9529006BA200C49B94 /* UsersDetailsView.swift */,
 			);
 			path = UsersDetailsView;
+			sourceTree = "<group>";
+		};
+		68AF3D9B290077C700C49B94 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D97290076FE00C49B94 /* ReposCell.swift */,
+				68AF3D99290077B500C49B94 /* UsersCell.swift */,
+				68AF3D9F290078CC00C49B94 /* OrgsCell.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		68AF3D9C2900788E00C49B94 /* ReposDetails */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D9D2900789900C49B94 /* ReposDetails.swift */,
+			);
+			path = ReposDetails;
+			sourceTree = "<group>";
+		};
+		68AF3DA12900795400C49B94 /* StarredView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3DA22900795F00C49B94 /* StarredView.swift */,
+			);
+			path = StarredView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -673,13 +712,18 @@
 				68AF3D50290025C000C49B94 /* LoginView.swift in Sources */,
 				68AF3D46290020C700C49B94 /* TokenManager.swift in Sources */,
 				68AF3CE229001FE400C49B94 /* SwiftUICustomViews.swift in Sources */,
+				68AF3D9E2900789900C49B94 /* ReposDetails.swift in Sources */,
 				68AF3D3F290020C700C49B94 /* APIError.swift in Sources */,
 				68AF3D8129004DDF00C49B94 /* CommitsView.swift in Sources */,
+				68AF3D98290076FE00C49B94 /* ReposCell.swift in Sources */,
 				68AF3D9129006AA400C49B94 /* OrgsModel.swift in Sources */,
 				68AF3D8929006A7600C49B94 /* ReposModel.swift in Sources */,
+				68AF3DA0290078CC00C49B94 /* OrgsCell.swift in Sources */,
 				68AF3D43290020C700C49B94 /* GitSecureStore.swift in Sources */,
 				68AF3D9329006AAA00C49B94 /* OrgsViewModel.swift in Sources */,
+				68AF3DA32900795F00C49B94 /* StarredView.swift in Sources */,
 				68AF3D9629006BA200C49B94 /* UsersDetailsView.swift in Sources */,
+				68AF3D9A290077B500C49B94 /* UsersCell.swift in Sources */,
 				68AF3D8729006A6800C49B94 /* UserViewModel.swift in Sources */,
 				68AF3D48290020C700C49B94 /* GitLocalization.swift in Sources */,
 				68AF3D44290020C700C49B94 /* Constants.swift in Sources */,

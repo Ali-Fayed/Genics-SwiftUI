@@ -83,7 +83,7 @@ struct HomeView: View {
                         .frame(width: 35, height: 35)
                         .cornerRadius(10, corners: .allCorners)
                     Text(item.title)
-                        .padding(10)
+                        .padding(7)
                     if item.id == 0 {
                         NavigationLink(destination: UsersView()) {}
                     } else if item.id == 1 {
@@ -91,6 +91,8 @@ struct HomeView: View {
                     } else if item.id == 2 {
                         NavigationLink(destination: IssuesView()) {}
                     } else if item.id == 3 {
+                        NavigationLink(destination: StarredView()) {}
+                    } else if item.id == 4 {
                         NavigationLink(destination: OrgsView()) {}
                     }
                 }
@@ -108,7 +110,7 @@ struct HomeView: View {
                     .frame(width: 35, height: 35)
                     .cornerRadius(10, corners: .allCorners)
                 Text("Genics Repository")
-                    .padding(10)
+                    .padding(7)
                 Spacer()
                 DisclosureIndicatorRow { openURL(URL(string: "https://github.com/Ali-Fayed/Githubgenics")!) } label: {}.frame(width: 50).foregroundColor(.gray)
             }
@@ -119,7 +121,7 @@ struct HomeView: View {
     func authenticationStatusSection() -> some View {
         return                 Section {
             Text("Authenticated User Mode")
-                .padding(10)
+                .padding(7)
         } header: {
             Text("State")
         }

@@ -13,17 +13,7 @@ struct UsersView: View {
     var body: some View {
         List {
             ForEach(viewModel.users, id: \.self) { item in
-                HStack(spacing: 10) {
-                    Image("ali")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 45, height: 45)
-                        .cornerRadius(10, corners: .allCorners)
-                    Text(item)
-                    .padding(8)
-                    Spacer()
-                    NavigationLink(destination: UsersDetailsView()){}.frame(width: 10)
-                }
+                UsersListCell(userName: item, userAvatar: "ali")
             }
         }.navigationTitle(Titles.usersViewTitle).searchable(text: $searchText, prompt: "Search Users")
     }
