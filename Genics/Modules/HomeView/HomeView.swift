@@ -9,15 +9,69 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
-    @State var searchedText = ""
+    @State var searchText = ""
+    @State var isSearchHistoryListHidden = true
+    @State var isSearchNavigatorListHidden = true
+    @Environment(\.openURL) var openURL
     var body: some View {
         NavigationView {
             List {
-                featuresSection()
-                repoSection()
-                authenticationStatusSection()
+                if isSearchNavigatorListHidden && isSearchHistoryListHidden {
+                    featuresSection()
+                    repoSection()
+                    authenticationStatusSection()
+                } else if !isSearchHistoryListHidden && isSearchNavigatorListHidden == true {
+                    searchHistoryList()
+                } else if !isSearchNavigatorListHidden && isSearchHistoryListHidden == true {
+                    searchNavigatorList()
+                }
             }.navigationTitle(Titles.homeViewTitle)
-        }.searchable(text: $searchedText)
+        }.searchable(text: $searchText, prompt: "Look for something")
+        .onChange(of: searchText) { newValue in
+            withAnimation {
+                if searchText.count > 0 {
+                    self.isSearchHistoryListHidden = true
+                    self.isSearchNavigatorListHidden = false
+                } else {
+                    self.isSearchNavigatorListHidden = true
+                    self.isSearchHistoryListHidden = true
+                }
+            }
+        }
+
+    }
+    func searchNavigatorList() -> some View {
+        return ForEach(viewModel.searchNavigatorData, id: \.self) { item in
+            HStack {
+                Image(item.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .cornerRadius(10, corners: .allCorners)
+                Text(item.title + "'\(searchText)'")
+                    .padding(10)
+                if item.id == 0 {
+                    Spacer()
+                    NavigationLink(destination: UsersView()) {}.frame(width: 10)
+                } else if item.id == 1 {
+                    Spacer()
+                    NavigationLink(destination: ReposView()) {}.frame(width: 10)
+                }  else if item.id == 2 {
+                    Spacer()
+                    NavigationLink(destination: IssuesView()) {}.frame(width: 10)
+                }
+            }
+        }
+    }
+    func searchHistoryList() -> some View {
+        return ForEach(viewModel.searchHistory, id: \.self) { item in
+            HStack {
+                Text(item)
+                .padding(7)
+                Spacer()
+                Image(systemName: "arrow.up.backward.circle.fill")
+            }
+        }
     }
     func featuresSection() -> some View {
         return Section {
@@ -55,7 +109,8 @@ struct HomeView: View {
                     .cornerRadius(10, corners: .allCorners)
                 Text("Genics Repository")
                     .padding(10)
-//                        Link(destination: URL(string: "https://github.com/Ali-Fayed/Githubgenics")!) {}
+                Spacer()
+                DisclosureIndicatorRow { openURL(URL(string: "https://github.com/Ali-Fayed/Githubgenics")!) } label: {}.frame(width: 50).foregroundColor(.gray)
             }
         } header: {
             Text("Repo")
@@ -70,7 +125,6 @@ struct HomeView: View {
         }
     }
 }
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

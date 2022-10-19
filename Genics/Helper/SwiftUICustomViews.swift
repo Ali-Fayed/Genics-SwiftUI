@@ -104,3 +104,33 @@ struct LargeButton: View {
         .frame(maxWidth:.infinity)
     }
 }
+struct DisclosureIndicatorRow<Label: View>: View {
+    let action: () -> Void
+    @ViewBuilder let label: () -> Label
+    
+    var body: some View {
+        Button(action: action, label: {
+            HStack {
+                label()
+                Spacer()
+                NavigationLink.empty
+            }
+        })
+    }
+}
+extension NavigationLink where Label == EmptyView, Destination == EmptyView {
+    static var empty: NavigationLink {
+        self.init(destination: EmptyView(), label: { EmptyView() })
+    }
+}
+extension View {
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            if !remove {
+                self.hidden()
+            }
+        } else {
+            self
+        }
+    }
+}
