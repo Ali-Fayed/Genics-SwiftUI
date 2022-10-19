@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OrgsView: View {
+    @StateObject var viewModel = UserViewModel()
     var body: some View {
             Text("Hello, World!")
                 .padding()

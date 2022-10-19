@@ -53,6 +53,15 @@
 		68AF3D7E29004A8900C49B94 /* OrgsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D7D29004A8900C49B94 /* OrgsView.swift */; };
 		68AF3D8129004DDF00C49B94 /* CommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8029004DDF00C49B94 /* CommitsView.swift */; };
 		68AF3D8329004E1600C49B94 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8229004E1600C49B94 /* SettingsView.swift */; };
+		68AF3D8529006A5E00C49B94 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8429006A5E00C49B94 /* UsersModel.swift */; };
+		68AF3D8729006A6800C49B94 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8629006A6800C49B94 /* UserViewModel.swift */; };
+		68AF3D8929006A7600C49B94 /* ReposModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8829006A7600C49B94 /* ReposModel.swift */; };
+		68AF3D8B29006A7D00C49B94 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8A29006A7D00C49B94 /* ReposViewModel.swift */; };
+		68AF3D8D29006A8900C49B94 /* IssuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8C29006A8900C49B94 /* IssuesModel.swift */; };
+		68AF3D8F29006A9600C49B94 /* IssesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D8E29006A9600C49B94 /* IssesViewModel.swift */; };
+		68AF3D9129006AA400C49B94 /* OrgsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9029006AA400C49B94 /* OrgsModel.swift */; };
+		68AF3D9329006AAA00C49B94 /* OrgsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9229006AAA00C49B94 /* OrgsViewModel.swift */; };
+		68AF3D9629006BA200C49B94 /* UsersDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9529006BA200C49B94 /* UsersDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +131,15 @@
 		68AF3D7D29004A8900C49B94 /* OrgsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsView.swift; sourceTree = "<group>"; };
 		68AF3D8029004DDF00C49B94 /* CommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsView.swift; sourceTree = "<group>"; };
 		68AF3D8229004E1600C49B94 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		68AF3D8429006A5E00C49B94 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		68AF3D8629006A6800C49B94 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		68AF3D8829006A7600C49B94 /* ReposModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposModel.swift; sourceTree = "<group>"; };
+		68AF3D8A29006A7D00C49B94 /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
+		68AF3D8C29006A8900C49B94 /* IssuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesModel.swift; sourceTree = "<group>"; };
+		68AF3D8E29006A9600C49B94 /* IssesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssesViewModel.swift; sourceTree = "<group>"; };
+		68AF3D9029006AA400C49B94 /* OrgsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsModel.swift; sourceTree = "<group>"; };
+		68AF3D9229006AAA00C49B94 /* OrgsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsViewModel.swift; sourceTree = "<group>"; };
+		68AF3D9529006BA200C49B94 /* UsersDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +389,7 @@
 		68AF3D5E29003E7F00C49B94 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				68AF3D9429006B9000C49B94 /* UsersDetailsView */,
 				68AF3D6429003FFD00C49B94 /* ExploreView */,
 				68AF3D6329003FF600C49B94 /* BookmarksView */,
 				68AF3D6229003FEF00C49B94 /* ProfileView */,
@@ -441,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				68AF3D7729004A6700C49B94 /* UsersView.swift */,
+				68AF3D8429006A5E00C49B94 /* UsersModel.swift */,
+				68AF3D8629006A6800C49B94 /* UserViewModel.swift */,
 			);
 			path = UsersView;
 			sourceTree = "<group>";
@@ -449,6 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				68AF3D7929004A7000C49B94 /* ReposView.swift */,
+				68AF3D8829006A7600C49B94 /* ReposModel.swift */,
+				68AF3D8A29006A7D00C49B94 /* ReposViewModel.swift */,
 			);
 			path = ReposView;
 			sourceTree = "<group>";
@@ -457,6 +480,8 @@
 			isa = PBXGroup;
 			children = (
 				68AF3D7B29004A7F00C49B94 /* IssuesView.swift */,
+				68AF3D8C29006A8900C49B94 /* IssuesModel.swift */,
+				68AF3D8E29006A9600C49B94 /* IssesViewModel.swift */,
 			);
 			path = IssuesView;
 			sourceTree = "<group>";
@@ -465,6 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				68AF3D7D29004A8900C49B94 /* OrgsView.swift */,
+				68AF3D9029006AA400C49B94 /* OrgsModel.swift */,
+				68AF3D9229006AAA00C49B94 /* OrgsViewModel.swift */,
 			);
 			path = OrgsView;
 			sourceTree = "<group>";
@@ -475,6 +502,14 @@
 				68AF3D8029004DDF00C49B94 /* CommitsView.swift */,
 			);
 			path = CommitsView;
+			sourceTree = "<group>";
+		};
+		68AF3D9429006B9000C49B94 /* UsersDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D9529006BA200C49B94 /* UsersDetailsView.swift */,
+			);
+			path = UsersDetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,6 +666,7 @@
 				68AF3D41290020C700C49B94 /* GitSecureStoreQueryable.swift in Sources */,
 				68AF3D7E29004A8900C49B94 /* OrgsView.swift in Sources */,
 				68AF3D3A290020C700C49B94 /* EventMonitor.swift in Sources */,
+				68AF3D8F29006A9600C49B94 /* IssesViewModel.swift in Sources */,
 				68AF3D3D290020C700C49B94 /* NetwrokReachability.swift in Sources */,
 				68AF3D6B2900403600C49B94 /* ProfileView.swift in Sources */,
 				68AF3D40290020C700C49B94 /* ErrorCode.swift in Sources */,
@@ -639,15 +675,23 @@
 				68AF3CE229001FE400C49B94 /* SwiftUICustomViews.swift in Sources */,
 				68AF3D3F290020C700C49B94 /* APIError.swift in Sources */,
 				68AF3D8129004DDF00C49B94 /* CommitsView.swift in Sources */,
+				68AF3D9129006AA400C49B94 /* OrgsModel.swift in Sources */,
+				68AF3D8929006A7600C49B94 /* ReposModel.swift in Sources */,
 				68AF3D43290020C700C49B94 /* GitSecureStore.swift in Sources */,
+				68AF3D9329006AAA00C49B94 /* OrgsViewModel.swift in Sources */,
+				68AF3D9629006BA200C49B94 /* UsersDetailsView.swift in Sources */,
+				68AF3D8729006A6800C49B94 /* UserViewModel.swift in Sources */,
 				68AF3D48290020C700C49B94 /* GitLocalization.swift in Sources */,
 				68AF3D44290020C700C49B94 /* Constants.swift in Sources */,
 				68AF3D3B290020C700C49B94 /* NetworkingManger.swift in Sources */,
+				68AF3D8D29006A8900C49B94 /* IssuesModel.swift in Sources */,
+				68AF3D8B29006A7D00C49B94 /* ReposViewModel.swift in Sources */,
 				68AF3D7A29004A7000C49B94 /* ReposView.swift in Sources */,
 				68AF3D42290020C700C49B94 /* GitSecureStoreError.swift in Sources */,
 				68AF3D3C290020C700C49B94 /* RequestRouter .swift in Sources */,
 				68AF3D7829004A6700C49B94 /* UsersView.swift in Sources */,
 				68AF3D3E290020C700C49B94 /* NetworkMonitor.swift in Sources */,
+				68AF3D8529006A5E00C49B94 /* UsersModel.swift in Sources */,
 				68AF3D45290020C700C49B94 /* AccessToken.swift in Sources */,
 				68AF3D5A2900396B00C49B94 /* LoginViewModel.swift in Sources */,
 				68AF3D742900445D00C49B94 /* HomeDataModel.swift in Sources */,

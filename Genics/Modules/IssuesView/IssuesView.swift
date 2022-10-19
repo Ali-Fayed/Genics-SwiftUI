@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct IssuesView: View {
+    @StateObject var viewModel = IssesViewModel()
+    @State var searchText = ""
     var body: some View {
-            Text("Hello, World!")
-                .padding()
-                .navigationTitle(Titles.issuesViewTitle)
+        List {
+            ForEach(viewModel.issues, id: \.self) { item in
+                HStack {
+                    Text(item)
+                    .padding(8)
+                    Spacer()
+                    NavigationLink(destination: UsersDetailsView()){}.frame(width: 10)
+                }
+            }
+        }.navigationTitle(Titles.issuesViewTitle).searchable(text: $searchText, prompt: "Search Issues")
     }
 }
 
