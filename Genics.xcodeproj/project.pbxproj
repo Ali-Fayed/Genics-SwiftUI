@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68AF3CB129001F1900C49B94 /* GenicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CB029001F1900C49B94 /* GenicsApp.swift */; };
-		68AF3CB329001F1900C49B94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CB229001F1900C49B94 /* ContentView.swift */; };
+		68AF3CB329001F1900C49B94 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CB229001F1900C49B94 /* NoteView.swift */; };
 		68AF3CB529001F1B00C49B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AF3CB429001F1B00C49B94 /* Assets.xcassets */; };
 		68AF3CB829001F1B00C49B94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AF3CB729001F1B00C49B94 /* Preview Assets.xcassets */; };
 		68AF3CBA29001F1B00C49B94 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CB929001F1B00C49B94 /* Persistence.swift */; };
@@ -16,6 +16,35 @@
 		68AF3CC729001F1B00C49B94 /* GenicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CC629001F1B00C49B94 /* GenicsTests.swift */; };
 		68AF3CD129001F1B00C49B94 /* GenicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CD029001F1B00C49B94 /* GenicsUITests.swift */; };
 		68AF3CD329001F1B00C49B94 /* GenicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CD229001F1B00C49B94 /* GenicsUITestsLaunchTests.swift */; };
+		68AF3CE029001F3400C49B94 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CDF29001F3400C49B94 /* SplashView.swift */; };
+		68AF3CE229001FE400C49B94 /* SwiftUICustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3CE129001FE300C49B94 /* SwiftUICustomViews.swift */; };
+		68AF3D20290020C700C49B94 /* loadingspinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 68AF3CE5290020C700C49B94 /* loadingspinner.json */; };
+		68AF3D39290020C700C49B94 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D07290020C700C49B94 /* RequestInterceptor.swift */; };
+		68AF3D3A290020C700C49B94 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D08290020C700C49B94 /* EventMonitor.swift */; };
+		68AF3D3B290020C700C49B94 /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D09290020C700C49B94 /* NetworkingManger.swift */; };
+		68AF3D3C290020C700C49B94 /* RequestRouter .swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D0B290020C700C49B94 /* RequestRouter .swift */; };
+		68AF3D3D290020C700C49B94 /* NetwrokReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D0D290020C700C49B94 /* NetwrokReachability.swift */; };
+		68AF3D3E290020C700C49B94 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D0E290020C700C49B94 /* NetworkMonitor.swift */; };
+		68AF3D3F290020C700C49B94 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D10290020C700C49B94 /* APIError.swift */; };
+		68AF3D40290020C700C49B94 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D11290020C700C49B94 /* ErrorCode.swift */; };
+		68AF3D41290020C700C49B94 /* GitSecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D14290020C700C49B94 /* GitSecureStoreQueryable.swift */; };
+		68AF3D42290020C700C49B94 /* GitSecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D15290020C700C49B94 /* GitSecureStoreError.swift */; };
+		68AF3D43290020C700C49B94 /* GitSecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D16290020C700C49B94 /* GitSecureStore.swift */; };
+		68AF3D44290020C700C49B94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D18290020C700C49B94 /* Constants.swift */; };
+		68AF3D45290020C700C49B94 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D19290020C700C49B94 /* AccessToken.swift */; };
+		68AF3D46290020C700C49B94 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D1A290020C700C49B94 /* TokenManager.swift */; };
+		68AF3D47290020C700C49B94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68AF3D1C290020C700C49B94 /* Localizable.strings */; };
+		68AF3D48290020C700C49B94 /* GitLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D1F290020C700C49B94 /* GitLocalization.swift */; };
+		68AF3D4B290021EF00C49B94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68AF3D4A290021EF00C49B94 /* Alamofire */; };
+		68AF3D4E2900226900C49B94 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 68AF3D4D2900226900C49B94 /* Lottie */; };
+		68AF3D50290025C000C49B94 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D4F290025C000C49B94 /* LoginView.swift */; };
+		68AF3D522900260400C49B94 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D512900260400C49B94 /* HomeView.swift */; };
+		68AF3D5A2900396B00C49B94 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D592900396B00C49B94 /* LoginViewModel.swift */; };
+		68AF3D5C29003BB700C49B94 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D5B29003BB700C49B94 /* AppConstants.swift */; };
+		68AF3D6129003EB500C49B94 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D6029003EB500C49B94 /* TabBarView.swift */; };
+		68AF3D662900401700C49B94 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D652900401700C49B94 /* ExploreView.swift */; };
+		68AF3D692900402B00C49B94 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D682900402B00C49B94 /* BookmarksView.swift */; };
+		68AF3D6B2900403600C49B94 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D6A2900403600C49B94 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +67,7 @@
 /* Begin PBXFileReference section */
 		68AF3CAD29001F1900C49B94 /* Genics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AF3CB029001F1900C49B94 /* GenicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenicsApp.swift; sourceTree = "<group>"; };
-		68AF3CB229001F1900C49B94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68AF3CB229001F1900C49B94 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		68AF3CB429001F1B00C49B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68AF3CB729001F1B00C49B94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		68AF3CB929001F1B00C49B94 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +77,35 @@
 		68AF3CCC29001F1B00C49B94 /* GenicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AF3CD029001F1B00C49B94 /* GenicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenicsUITests.swift; sourceTree = "<group>"; };
 		68AF3CD229001F1B00C49B94 /* GenicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		68AF3CDF29001F3400C49B94 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		68AF3CE129001FE300C49B94 /* SwiftUICustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICustomViews.swift; sourceTree = "<group>"; };
+		68AF3CE5290020C700C49B94 /* loadingspinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingspinner.json; sourceTree = "<group>"; };
+		68AF3D07290020C700C49B94 /* RequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
+		68AF3D08290020C700C49B94 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		68AF3D09290020C700C49B94 /* NetworkingManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
+		68AF3D0B290020C700C49B94 /* RequestRouter .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestRouter .swift"; sourceTree = "<group>"; };
+		68AF3D0D290020C700C49B94 /* NetwrokReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetwrokReachability.swift; sourceTree = "<group>"; };
+		68AF3D0E290020C700C49B94 /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		68AF3D10290020C700C49B94 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		68AF3D11290020C700C49B94 /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
+		68AF3D14290020C700C49B94 /* GitSecureStoreQueryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitSecureStoreQueryable.swift; sourceTree = "<group>"; };
+		68AF3D15290020C700C49B94 /* GitSecureStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitSecureStoreError.swift; sourceTree = "<group>"; };
+		68AF3D16290020C700C49B94 /* GitSecureStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitSecureStore.swift; sourceTree = "<group>"; };
+		68AF3D18290020C700C49B94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		68AF3D19290020C700C49B94 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		68AF3D1A290020C700C49B94 /* TokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		68AF3D1D290020C700C49B94 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		68AF3D1E290020C700C49B94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		68AF3D1F290020C700C49B94 /* GitLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitLocalization.swift; sourceTree = "<group>"; };
+		68AF3D4F290025C000C49B94 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		68AF3D512900260400C49B94 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		68AF3D582900377A00C49B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68AF3D592900396B00C49B94 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		68AF3D5B29003BB700C49B94 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		68AF3D6029003EB500C49B94 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		68AF3D652900401700C49B94 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		68AF3D682900402B00C49B94 /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
+		68AF3D6A2900403600C49B94 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AF3D4B290021EF00C49B94 /* Alamofire in Frameworks */,
+				68AF3D4E2900226900C49B94 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +158,13 @@
 		68AF3CAF29001F1900C49B94 /* Genics */ = {
 			isa = PBXGroup;
 			children = (
-				68AF3CB029001F1900C49B94 /* GenicsApp.swift */,
-				68AF3CB229001F1900C49B94 /* ContentView.swift */,
-				68AF3CB429001F1B00C49B94 /* Assets.xcassets */,
-				68AF3CB929001F1B00C49B94 /* Persistence.swift */,
-				68AF3CBB29001F1B00C49B94 /* Genics.xcdatamodeld */,
+				68AF3D6E2900428000C49B94 /* Application */,
+				68AF3D5E29003E7F00C49B94 /* Modules */,
+				68AF3D53290026E400C49B94 /* Assets */,
+				68AF3D572900270500C49B94 /* Persistence */,
+				68AF3CE3290020C700C49B94 /* Helper */,
 				68AF3CB629001F1B00C49B94 /* Preview Content */,
+				68AF3D582900377A00C49B94 /* Info.plist */,
 			);
 			path = Genics;
 			sourceTree = "<group>";
@@ -133,6 +194,265 @@
 			path = GenicsUITests;
 			sourceTree = "<group>";
 		};
+		68AF3CE3290020C700C49B94 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CE129001FE300C49B94 /* SwiftUICustomViews.swift */,
+				68AF3CE4290020C700C49B94 /* Resources */,
+				68AF3D05290020C700C49B94 /* NetworkLayer */,
+				68AF3D12290020C700C49B94 /* Authentication */,
+				68AF3D1B290020C700C49B94 /* Localization */,
+				68AF3D5B29003BB700C49B94 /* AppConstants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		68AF3CE4290020C700C49B94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CE5290020C700C49B94 /* loadingspinner.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68AF3D05290020C700C49B94 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D06290020C700C49B94 /* RequestHandler */,
+				68AF3D0A290020C700C49B94 /* RequestRouter */,
+				68AF3D0C290020C700C49B94 /* NetworkReachability */,
+				68AF3D0F290020C700C49B94 /* ErrorHndler */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		68AF3D06290020C700C49B94 /* RequestHandler */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D07290020C700C49B94 /* RequestInterceptor.swift */,
+				68AF3D08290020C700C49B94 /* EventMonitor.swift */,
+				68AF3D09290020C700C49B94 /* NetworkingManger.swift */,
+			);
+			path = RequestHandler;
+			sourceTree = "<group>";
+		};
+		68AF3D0A290020C700C49B94 /* RequestRouter */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D0B290020C700C49B94 /* RequestRouter .swift */,
+			);
+			path = RequestRouter;
+			sourceTree = "<group>";
+		};
+		68AF3D0C290020C700C49B94 /* NetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D0D290020C700C49B94 /* NetwrokReachability.swift */,
+				68AF3D0E290020C700C49B94 /* NetworkMonitor.swift */,
+			);
+			path = NetworkReachability;
+			sourceTree = "<group>";
+		};
+		68AF3D0F290020C700C49B94 /* ErrorHndler */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D10290020C700C49B94 /* APIError.swift */,
+				68AF3D11290020C700C49B94 /* ErrorCode.swift */,
+			);
+			path = ErrorHndler;
+			sourceTree = "<group>";
+		};
+		68AF3D12290020C700C49B94 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D13290020C700C49B94 /* KeyChain */,
+				68AF3D17290020C700C49B94 /* TokenManger */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		68AF3D13290020C700C49B94 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D14290020C700C49B94 /* GitSecureStoreQueryable.swift */,
+				68AF3D15290020C700C49B94 /* GitSecureStoreError.swift */,
+				68AF3D16290020C700C49B94 /* GitSecureStore.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		68AF3D17290020C700C49B94 /* TokenManger */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D18290020C700C49B94 /* Constants.swift */,
+				68AF3D19290020C700C49B94 /* AccessToken.swift */,
+				68AF3D1A290020C700C49B94 /* TokenManager.swift */,
+			);
+			path = TokenManger;
+			sourceTree = "<group>";
+		};
+		68AF3D1B290020C700C49B94 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D1C290020C700C49B94 /* Localizable.strings */,
+				68AF3D1F290020C700C49B94 /* GitLocalization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		68AF3D53290026E400C49B94 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CB429001F1B00C49B94 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		68AF3D54290026EB00C49B94 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CDF29001F3400C49B94 /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		68AF3D55290026F400C49B94 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D4F290025C000C49B94 /* LoginView.swift */,
+				68AF3D592900396B00C49B94 /* LoginViewModel.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		68AF3D56290026FB00C49B94 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D512900260400C49B94 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		68AF3D572900270500C49B94 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CBB29001F1B00C49B94 /* Genics.xcdatamodeld */,
+				68AF3CB929001F1B00C49B94 /* Persistence.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		68AF3D5D29003E6D00C49B94 /* NoteView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CB229001F1900C49B94 /* NoteView.swift */,
+			);
+			path = NoteView;
+			sourceTree = "<group>";
+		};
+		68AF3D5E29003E7F00C49B94 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D72290042D500C49B94 /* OrgsView */,
+				68AF3D71290042CF00C49B94 /* IssuesView */,
+				68AF3D70290042C700C49B94 /* ReposView */,
+				68AF3D6F290042C000C49B94 /* UsersView */,
+				68AF3D6D2900422000C49B94 /* SettingsView */,
+				68AF3D54290026EB00C49B94 /* SplashView */,
+				68AF3D55290026F400C49B94 /* LoginView */,
+				68AF3D5F29003EA900C49B94 /* TabVarView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		68AF3D5F29003EA900C49B94 /* TabVarView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D6029003EB500C49B94 /* TabBarView.swift */,
+				68AF3D6C290040FA00C49B94 /* TabBarViews */,
+			);
+			path = TabVarView;
+			sourceTree = "<group>";
+		};
+		68AF3D6229003FEF00C49B94 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D6A2900403600C49B94 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		68AF3D6329003FF600C49B94 /* BookmarksView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D682900402B00C49B94 /* BookmarksView.swift */,
+			);
+			path = BookmarksView;
+			sourceTree = "<group>";
+		};
+		68AF3D6429003FFD00C49B94 /* ExploreView */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D652900401700C49B94 /* ExploreView.swift */,
+			);
+			path = ExploreView;
+			sourceTree = "<group>";
+		};
+		68AF3D6C290040FA00C49B94 /* TabBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3D6429003FFD00C49B94 /* ExploreView */,
+				68AF3D6329003FF600C49B94 /* BookmarksView */,
+				68AF3D6229003FEF00C49B94 /* ProfileView */,
+				68AF3D5D29003E6D00C49B94 /* NoteView */,
+				68AF3D56290026FB00C49B94 /* HomeView */,
+			);
+			path = TabBarViews;
+			sourceTree = "<group>";
+		};
+		68AF3D6D2900422000C49B94 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		68AF3D6E2900428000C49B94 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				68AF3CB029001F1900C49B94 /* GenicsApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		68AF3D6F290042C000C49B94 /* UsersView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UsersView;
+			sourceTree = "<group>";
+		};
+		68AF3D70290042C700C49B94 /* ReposView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReposView;
+			sourceTree = "<group>";
+		};
+		68AF3D71290042CF00C49B94 /* IssuesView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IssuesView;
+			sourceTree = "<group>";
+		};
+		68AF3D72290042D500C49B94 /* OrgsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OrgsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +469,10 @@
 			dependencies = (
 			);
 			name = Genics;
+			packageProductDependencies = (
+				68AF3D4A290021EF00C49B94 /* Alamofire */,
+				68AF3D4D2900226900C49B94 /* Lottie */,
+			);
 			productName = Genics;
 			productReference = 68AF3CAD29001F1900C49B94 /* Genics.app */;
 			productType = "com.apple.product-type.application";
@@ -219,8 +543,13 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 68AF3CA429001F1900C49B94;
+			packageReferences = (
+				68AF3D49290021EE00C49B94 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				68AF3D4C2900226900C49B94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 68AF3CAE29001F1900C49B94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,8 +566,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AF3D47290020C700C49B94 /* Localizable.strings in Resources */,
 				68AF3CB829001F1B00C49B94 /* Preview Assets.xcassets in Resources */,
 				68AF3CB529001F1B00C49B94 /* Assets.xcassets in Resources */,
+				68AF3D20290020C700C49B94 /* loadingspinner.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +594,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AF3D5C29003BB700C49B94 /* AppConstants.swift in Sources */,
+				68AF3D662900401700C49B94 /* ExploreView.swift in Sources */,
+				68AF3D692900402B00C49B94 /* BookmarksView.swift in Sources */,
+				68AF3CE029001F3400C49B94 /* SplashView.swift in Sources */,
+				68AF3D6129003EB500C49B94 /* TabBarView.swift in Sources */,
 				68AF3CBD29001F1B00C49B94 /* Genics.xcdatamodeld in Sources */,
 				68AF3CBA29001F1B00C49B94 /* Persistence.swift in Sources */,
-				68AF3CB329001F1900C49B94 /* ContentView.swift in Sources */,
+				68AF3D39290020C700C49B94 /* RequestInterceptor.swift in Sources */,
+				68AF3D41290020C700C49B94 /* GitSecureStoreQueryable.swift in Sources */,
+				68AF3D3A290020C700C49B94 /* EventMonitor.swift in Sources */,
+				68AF3D3D290020C700C49B94 /* NetwrokReachability.swift in Sources */,
+				68AF3D6B2900403600C49B94 /* ProfileView.swift in Sources */,
+				68AF3D40290020C700C49B94 /* ErrorCode.swift in Sources */,
+				68AF3D50290025C000C49B94 /* LoginView.swift in Sources */,
+				68AF3D46290020C700C49B94 /* TokenManager.swift in Sources */,
+				68AF3CE229001FE400C49B94 /* SwiftUICustomViews.swift in Sources */,
+				68AF3D3F290020C700C49B94 /* APIError.swift in Sources */,
+				68AF3D43290020C700C49B94 /* GitSecureStore.swift in Sources */,
+				68AF3D48290020C700C49B94 /* GitLocalization.swift in Sources */,
+				68AF3D44290020C700C49B94 /* Constants.swift in Sources */,
+				68AF3D3B290020C700C49B94 /* NetworkingManger.swift in Sources */,
+				68AF3D42290020C700C49B94 /* GitSecureStoreError.swift in Sources */,
+				68AF3D3C290020C700C49B94 /* RequestRouter .swift in Sources */,
+				68AF3D3E290020C700C49B94 /* NetworkMonitor.swift in Sources */,
+				68AF3D45290020C700C49B94 /* AccessToken.swift in Sources */,
+				68AF3D5A2900396B00C49B94 /* LoginViewModel.swift in Sources */,
+				68AF3CB329001F1900C49B94 /* NoteView.swift in Sources */,
+				68AF3D522900260400C49B94 /* HomeView.swift in Sources */,
 				68AF3CB129001F1900C49B94 /* GenicsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +657,18 @@
 			targetProxy = 68AF3CCD29001F1B00C49B94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68AF3D1C290020C700C49B94 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68AF3D1D290020C700C49B94 /* ar */,
+				68AF3D1E290020C700C49B94 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		68AF3CD429001F1B00C49B94 /* Debug */ = {
@@ -428,11 +796,13 @@
 				DEVELOPMENT_TEAM = H368HQSP2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Genics/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,11 +827,13 @@
 				DEVELOPMENT_TEAM = H368HQSP2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Genics/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,6 +963,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68AF3D49290021EE00C49B94 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		68AF3D4C2900226900C49B94 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68AF3D4A290021EF00C49B94 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68AF3D49290021EE00C49B94 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		68AF3D4D2900226900C49B94 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68AF3D4C2900226900C49B94 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		68AF3CBB29001F1B00C49B94 /* Genics.xcdatamodeld */ = {

@@ -10,10 +10,9 @@ import SwiftUI
 @main
 struct GenicsApp: App {
     let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView().preferredColorScheme(.dark)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
