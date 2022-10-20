@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewModel()
+    @ObservedObject var homeDataSource = HomeDataSource()
     @State var searchText = ""
     @State var isSearchHistoryListHidden = true
     @State var isSearchNavigatorListHidden = true
@@ -25,7 +25,7 @@ struct HomeView: View {
                 } else if !isSearchNavigatorListHidden && isSearchHistoryListHidden == true {
                     searchNavigatorList()
                 }
-            }.navigationTitle(Titles.homeViewTitle)
+            }.navigationTitle("Home")
         }.searchable(text: $searchText, prompt: "Look for something")
         .onChange(of: searchText) { newValue in
             withAnimation {
@@ -38,10 +38,9 @@ struct HomeView: View {
                 }
             }
         }
-
     }
     func searchNavigatorList() -> some View {
-        return ForEach(viewModel.searchNavigatorData, id: \.self) { item in
+        return ForEach(homeDataSource.searchNavigatorData, id: \.self) { item in
             HStack {
                 Image(item.image)
                     .resizable()
@@ -64,7 +63,7 @@ struct HomeView: View {
         }
     }
     func searchHistoryList() -> some View {
-        return ForEach(viewModel.searchHistory, id: \.self) { item in
+        return ForEach(homeDataSource.searchHistory, id: \.self) { item in
             HStack {
                 Text(item)
                 .padding(7)
@@ -75,7 +74,7 @@ struct HomeView: View {
     }
     func featuresSection() -> some View {
         return Section {
-            ForEach(viewModel.homeData, id: \.self) { item in
+            ForEach(homeDataSource.homeData, id: \.self) { item in
                 HStack {
                     Image(item.image)
                         .resizable()
@@ -85,7 +84,7 @@ struct HomeView: View {
                     Text(item.title)
                         .padding(7)
                     if item.id == 0 {
-                        NavigationLink(destination: UsersView()) {}
+                        NavigationLink(destination: UsersViewContentView()) {}
                     } else if item.id == 1 {
                         NavigationLink(destination: ReposView()) {}
                     } else if item.id == 2 {

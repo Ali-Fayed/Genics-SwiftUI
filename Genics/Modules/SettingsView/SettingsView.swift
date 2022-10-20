@@ -41,6 +41,11 @@ struct SettingsView: View {
                 }) {
                     Text("Repository Page").foregroundColor(.primary)
                 }
+                Button(action: {
+                    print("Perform an action here...")
+                }) {
+                    Text("Send Feedback").foregroundColor(.primary)
+                }
             }
             Section(header: Text("Privacy")) {
                 Button(action: {
@@ -63,7 +68,7 @@ struct SettingsView: View {
                     Text("1.02")
                 }
             }
-        }.navigationBarTitle(Titles.settingsViewTitle)
+        }.navigationBarTitle("Settings")
     }
 }
 

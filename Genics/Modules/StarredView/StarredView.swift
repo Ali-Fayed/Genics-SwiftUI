@@ -11,7 +11,7 @@ struct StarredView: View {
     var body: some View {
         List {
             ReposListCell(userAvatar: "ali", userName: "alifayed", repoName: "KingFisher", repoDescription: "LightWieght Swift Library for downlaoding images from apis", repoStarsCount: "1334", repoLanguage: "Swift", repoLanguageCircleColor: "red")
-        }.navigationTitle(Titles.starredViewTitle)
+        }.navigationTitle("Starred")
     }
 }
 

@@ -22,7 +22,7 @@ struct BookmarksView: View {
                 } header: {
                     Text("Repositories")
                 }
-            }.navigationTitle(Titles.bookmarksViewTitle)
+            }.navigationTitle("Bookmarks")
         }.searchable(text: $searchText, prompt: "Search Bookmarks")
     }
 }

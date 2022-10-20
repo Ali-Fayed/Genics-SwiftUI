@@ -36,7 +36,7 @@ struct NoteView: View {
                     }
                 }
             }
-            .navigationTitle(Titles.noteViewTitle)
+            .navigationTitle("Note")
             Text("Select an item")
         }
     }

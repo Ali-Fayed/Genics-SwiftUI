@@ -20,7 +20,7 @@ struct IssuesView: View {
                     NavigationLink(destination: UsersDetailsView()){}.frame(width: 10)
                 }
             }
-        }.navigationTitle(Titles.issuesViewTitle).searchable(text: $searchText, prompt: "Search Issues")
+        }.navigationTitle("Issues").searchable(text: $searchText, prompt: "Search Issues")
     }
 }
 

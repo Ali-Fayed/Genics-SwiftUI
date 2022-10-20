@@ -12,11 +12,11 @@ struct UsersListCell: View {
     let userAvatar: String
     var body: some View {
         HStack(spacing: 10) {
-            Image(userAvatar)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 45, height: 45)
-                .cornerRadius(10, corners: .allCorners)
+            AsyncImage(url: URL(string: userAvatar)!,
+                          placeholder: { Text("Loading ...") },
+                          image: { Image(uiImage: $0).resizable() })
+            .frame(width: 50, height: 50)
+            .cornerRadius(25, corners: .allCorners)
             Text(userName)
             .padding(8)
             Spacer()

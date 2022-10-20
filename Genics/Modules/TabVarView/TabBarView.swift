@@ -12,23 +12,23 @@ struct TabBarView: View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label(Titles.homeViewTitle, systemImage: "homekit")
+                    Label("Home", systemImage: "homekit")
                 }
             ExploreView()
                 .tabItem {
-                    Label(Titles.exploreViewTitle, systemImage: "lightbulb.fill")
+                    Label("Explore", systemImage: "lightbulb.fill")
                 }
             BookmarksView()
                 .tabItem {
-                    Label(Titles.bookmarksViewTitle, systemImage: "bookmark.fill")
+                    Label("Bookmarks", systemImage: "bookmark.fill")
                 }
             NoteView()
                 .tabItem {
-                    Label(Titles.noteViewTitle, systemImage: "note.text")
+                    Label("Note", systemImage: "note.text")
                 }
             ProfileView()
                 .tabItem {
-                    Label(Titles.profileViewTitle, systemImage: "person.fill")
+                    Label("Profile", systemImage: "person.fill")
             }
             
         }

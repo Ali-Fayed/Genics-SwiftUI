@@ -12,7 +12,7 @@ struct OrgsView: View {
     var body: some View {
         List {
             OrgsListCell(orgsName: "Apple", orgsAvatar: "ali")
-        }.navigationTitle(Titles.organizationsViewTitle)
+        }.navigationTitle("Organizations")
     }
 }
 

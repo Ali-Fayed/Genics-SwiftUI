@@ -13,7 +13,7 @@ struct ReposView: View {
     var body: some View {
         List {
             ReposListCell(userAvatar: "ali", userName: "alifayed", repoName: "KingFisher", repoDescription: "LightWieght Swift Library for downlaoding images from apis", repoStarsCount: "1334", repoLanguage: "Swift", repoLanguageCircleColor: "red")
-        }.navigationTitle(Titles.repositoriesViewTitle).searchable(text: $searchText, prompt: "Search Repositories")
+        }.navigationTitle("Repositories").searchable(text: $searchText, prompt: "Search Repositories")
     }
 }
 
@@ -21,4 +21,8 @@ struct ReposView_Previews: PreviewProvider {
     static var previews: some View {
         ReposView()
     }
+}
+
+class UserViewModel: ObservableObject {
+    var users = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3"]
 }

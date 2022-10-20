@@ -85,7 +85,7 @@ struct ProfileView: View {
                             }.padding(5)
                         }
                     }
-                .navigationTitle(Titles.profileViewTitle).toolbar {
+                .navigationTitle("Profile").toolbar {
                     ToolbarItem {
                         Button(action: shareUser) {
                             Label("", systemImage: "square.and.arrow.up")

@@ -10,9 +10,21 @@ import SwiftUI
 struct ExploreView: View {
     var body: some View {
         NavigationView {
-            Text("Hello, World!")
-                .padding()
-                .navigationTitle(Titles.exploreViewTitle)
+            List {
+                Section {
+                    VStack {
+                        Image("header")  .resizable()
+                            .scaledToFit()
+                            .background(Color.red)
+                            .frame(width: 400, height: 150)
+                            .cornerRadius(10, corners: .allCorners)
+                        Spacer()
+                    }
+                } header: {
+                    Text("Discover")
+                }
+
+            }.navigationTitle("Explore")
         }
     }
 }
