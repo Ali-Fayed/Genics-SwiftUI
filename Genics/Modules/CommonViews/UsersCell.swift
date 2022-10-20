@@ -13,14 +13,13 @@ struct UsersListCell: View {
     var body: some View {
         HStack(spacing: 10) {
             AsyncImage(url: URL(string: userAvatar)!,
-                          placeholder: { Text("Loading ...") },
+                          placeholder: { ProgressView() },
                           image: { Image(uiImage: $0).resizable() })
             .frame(width: 50, height: 50)
             .cornerRadius(25, corners: .allCorners)
             Text(userName)
-            .padding(8)
+            .padding(5)
             Spacer()
-            NavigationLink(destination: UsersDetailsView()){}.frame(width: 10)
         }
     }
 }

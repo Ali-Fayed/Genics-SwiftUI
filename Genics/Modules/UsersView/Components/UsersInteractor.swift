@@ -12,15 +12,16 @@ protocol UsersViewBusinessLogic {
 }
 class UsersViewInteractor: UsersViewBusinessLogic {
     var presenter: UsersViewPresentationLogic?
-    var useCase: HomeUseCase
-    init(useCase: HomeUseCase = HomeUseCase()) {
+    var useCase: UsersViewUseCase
+    init(useCase: UsersViewUseCase = UsersViewUseCase()) {
         self.useCase = useCase
     }
     func loadUsersList(request: UsersModel.LoadUsersList.Request, requestValues: UsersListRequestValue) {
         Task {
             do {
                 let users = try await useCase.fetchUsers(requestValues: requestValues)
-                let response = UsersModel.LoadUsersList.Response(usersListData: users)
+                let topUsers = try await useCase.fetchTopUsers()
+                let response = UsersModel.LoadUsersList.UsersListResponse(usersListData: users, topUsersData: topUsers)
                 self.presenter?.presentUsersListData(response: response)
             } catch {
                 let error = UsersModel.LoadUsersList.ApiError(error: error)

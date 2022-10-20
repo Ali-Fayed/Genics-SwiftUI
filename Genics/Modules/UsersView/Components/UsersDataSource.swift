@@ -8,6 +8,7 @@
 import Foundation
 class UsersViewDataSource: ObservableObject {
   @Published var usersList: [User] = []
+  @Published var topUsers: [User] = []
   @Published var apiError: Error?
   @Published var isShowingAlert = false
 }

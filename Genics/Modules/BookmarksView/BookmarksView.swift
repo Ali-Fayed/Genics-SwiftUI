@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct BookmarksView: View {
-    @State var searchText = ""
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \SavedUsers.userName, ascending: true)],
+        animation: .default)
+    private var users: FetchedResults<SavedUsers>
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    UsersListCell(userName: "Ali", userAvatar: "ali")
+                    ForEach(users) { item in
+                        UsersListCell(userName: item.userName ?? "", userAvatar: item.userAvatar ?? "")
+                    }.onDelete(perform: deleteItems)
                 } header: {
                     Text("Users")
                 }
@@ -22,13 +28,27 @@ struct BookmarksView: View {
                 } header: {
                     Text("Repositories")
                 }
+            }.toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
             }.navigationTitle("Bookmarks")
-        }.searchable(text: $searchText, prompt: "Search Bookmarks")
+        }
+    }
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { users[$0] }.forEach(viewContext.delete)
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
     }
 }
-
 struct BookmarksView_Previews: PreviewProvider {
     static var previews: some View {
-        BookmarksView()
+        BookmarksView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

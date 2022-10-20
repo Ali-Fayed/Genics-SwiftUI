@@ -5,7 +5,6 @@
 //  Created by Ali Fixed on 20/10/2022.
 //
 
-import Foundation
 import SwiftUI
 
 struct UsersViewContentView: View {

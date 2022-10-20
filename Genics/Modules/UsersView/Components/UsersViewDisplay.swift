@@ -22,6 +22,7 @@ extension UsersView: UsersViewDisplayLogic {
     func displayUsersList(viewModel: UsersModel.LoadUsersList.ViewModel) {
         DispatchQueue.main.async {
             dataSource.usersList = viewModel.usersListData
+            dataSource.topUsers = viewModel.topUsersData
         }
     }
     func fetchUsersList(usersListRequestValue: UsersListRequestValue = UsersListRequestValue(page: 1, searchText: "mm")) {

@@ -11,14 +11,16 @@ enum UsersModel {
   enum LoadUsersList {
     struct Request {}
 
-    struct Response {
+    struct UsersListResponse {
       var usersListData: [User]
+      var topUsersData: [User]
     }
     struct ApiError {
         var error: Error
       }
     struct ViewModel {
         var usersListData: [User]
+        var topUsersData: [User]
     }
   }
 }

@@ -17,7 +17,6 @@ struct IssuesView: View {
                     Text(item)
                     .padding(8)
                     Spacer()
-                    NavigationLink(destination: UsersDetailsView()){}.frame(width: 10)
                 }
             }
         }.navigationTitle("Issues").searchable(text: $searchText, prompt: "Search Issues")
