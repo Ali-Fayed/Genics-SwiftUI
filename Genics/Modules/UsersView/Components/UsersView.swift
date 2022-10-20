@@ -7,32 +7,49 @@
 
 import SwiftUI
 struct UsersView: View {
-    @ObservedObject var viewDataSource = UsersViewDataSource()
+    @ObservedObject var dataSource = UsersViewDataSource()
     @State var searchText = ""
+    @State var isDataLoaded = false
     var interactor: UsersViewBusinessLogic?
     var body: some View {
-        List {
-            ForEach(viewDataSource.usersList, id: \.self) { item in
-                UsersListCell(userName: item.userName, userAvatar: item.userAvatar)
-            }
-        }.navigationTitle("Users")
-            .searchable(text: $searchText, prompt: "Search Users").onAppear {
-            fetchUsersList()
-        }.alert(isPresented: $viewDataSource.isShowingAlert) {
-            Alert (
-                title: Text("Error"),
-                message: Text(viewDataSource.apiError?.localizedDescription ?? ""),
-                primaryButton: .destructive(Text("Yes"), action: {
-                   
-                }),
-                secondaryButton: .default(Text("Cancel"), action: {
-                    print("Cancel")
-                })
-            )
+        if isDataLoaded {
+            usersList()
+        } else {
+            progressView()
         }
     }
 }
-
+ // MARK: - Users View Methods
+extension UsersView {
+    func usersList() -> some View {
+        return List {
+            ForEach(dataSource.usersList, id: \.self) { item in
+                UsersListCell(userName: item.userName, userAvatar: item.userAvatar)
+            }
+        }.navigationTitle("Users")
+            .searchable(text: $searchText, prompt: "Search Users")
+             .onChange(of: searchText) { _ in
+                    if searchText.count > 2 {
+                        let requestValues = UsersListRequestValue(page: 1, searchText: searchText)
+                        fetchUsersList(usersListRequestValue: requestValues)
+                    } else if searchText.count == 0 {
+                        fetchUsersList()
+                    }
+            }
+    }
+    func progressView() -> some View {
+        return ProgressView().padding(.bottom, 60)
+            .onAppear {
+                fetchUsersList()
+            }.onChange(of: dataSource.usersList) { _ in
+                withAnimation {
+                    self.isDataLoaded = true
+                }
+            }.alert(isPresented: $dataSource.isShowingAlert) {
+                presentAlert(title: "Error", message: dataSource.apiError?.localizedDescription ?? "")
+            }
+    }
+}
 struct UsersView_Previews: PreviewProvider {
     static var previews: some View {
         UsersView()

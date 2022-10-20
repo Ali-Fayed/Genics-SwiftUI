@@ -134,3 +134,15 @@ extension View {
         }
     }
 }
+func presentAlert(title: String, message: String) -> Alert {
+    return Alert (
+        title: Text("Error"),
+        message: Text(message),
+        primaryButton: .destructive(Text("Ok"), action: {
+            print("Ok")
+        }),
+        secondaryButton: .default(Text("Cancel"), action: {
+            print("Cancel")
+        })
+    )
+}

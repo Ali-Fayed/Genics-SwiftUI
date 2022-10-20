@@ -14,16 +14,18 @@ protocol UsersViewDisplayLogic {
 }
 extension UsersView: UsersViewDisplayLogic {
     func displayError(error: UsersModel.LoadUsersList.ApiError, isShowingAlert: Bool) {
-        viewDataSource.apiError = error.error
-        viewDataSource.isShowingAlert = isShowingAlert
-    }
-    func displayUsersList(viewModel: UsersModel.LoadUsersList.ViewModel) {
-        DispatchQueue.main.async { 
-            viewDataSource.usersList = viewModel.usersListData
+        DispatchQueue.main.async {
+            dataSource.apiError = error.error
+            dataSource.isShowingAlert = isShowingAlert
         }
     }
-    func fetchUsersList() {
+    func displayUsersList(viewModel: UsersModel.LoadUsersList.ViewModel) {
+        DispatchQueue.main.async {
+            dataSource.usersList = viewModel.usersListData
+        }
+    }
+    func fetchUsersList(usersListRequestValue: UsersListRequestValue = UsersListRequestValue(page: 1, searchText: "mm")) {
         let request = UsersModel.LoadUsersList.Request()
-        interactor?.loadUsersList(request: request)
+        interactor?.loadUsersList(request: request, requestValues: usersListRequestValue)
     }
 }
