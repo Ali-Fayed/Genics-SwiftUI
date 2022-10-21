@@ -54,7 +54,7 @@ struct HomeView: View {
                     NavigationLink(destination: UsersView()) {}.frame(width: 10)
                 } else if item.id == 1 {
                     Spacer()
-                    NavigationLink(destination: ReposView()) {}.frame(width: 10)
+                    NavigationLink(destination: ReposView(viewType: .publicRepos)) {}.frame(width: 10)
                 }  else if item.id == 2 {
                     Spacer()
                     NavigationLink(destination: IssuesView()) {}.frame(width: 10)
@@ -86,11 +86,11 @@ struct HomeView: View {
                     if item.id == 0 {
                         NavigationLink(destination: UsersViewContentView()) {}
                     } else if item.id == 1 {
-                        NavigationLink(destination: ReposViewContentView()) {}
+                        NavigationLink(destination: ReposViewContentView().navigationTitle("Repositories")) {}
                     } else if item.id == 2 {
                         NavigationLink(destination: IssuesView()) {}
                     } else if item.id == 3 {
-                        NavigationLink(destination: StarredView()) {}
+                        NavigationLink(destination: StarredViewContentView().navigationTitle("Starred")) {}
                     } else if item.id == 4 {
                         NavigationLink(destination: OrgsView()) {}
                     }

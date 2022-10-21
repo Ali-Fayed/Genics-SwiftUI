@@ -20,7 +20,9 @@ class ReposViewInteractor: ReposViewViewBusinessLogic {
         Task {
             do {
                 let reposList = try await useCase.fetchRepos(usersListRequestValue: requestValues)
-                let response = ReposModel.LoadReposList.ReposListResponse(reposListData: reposList)
+                let starredRepos = try await useCase.fetchStarred()
+                let userRepos = try await useCase.fetchUserRepos()
+                let response = ReposModel.LoadReposList.ReposListResponse(reposListData: reposList, starredReposData: starredRepos, userRepos: userRepos)
                 self.presenter?.presentReposListData(response: response)
             } catch let error {
                 let error = ReposModel.LoadReposList.ApiError(error: error)

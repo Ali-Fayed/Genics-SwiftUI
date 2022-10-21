@@ -22,6 +22,8 @@ extension ReposView: ReposViewDisplayLogic {
     func displayReposList(viewModel: ReposModel.LoadReposList.ViewModel) {
         DispatchQueue.main.async {
             dataSource.reposList = viewModel.reposListData
+            dataSource.starredReposList = viewModel.starredReposData
+            dataSource.userReposList = viewModel.userRepos
         }
     }
     func fetchReposList(usersListRequestValue: UsersListRequestValue = UsersListRequestValue(page: 1, searchText: "language:Swift")) {

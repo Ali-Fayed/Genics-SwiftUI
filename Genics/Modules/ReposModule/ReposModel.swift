@@ -12,12 +12,16 @@ enum ReposModel {
 
     struct ReposListResponse {
       var reposListData: [Repository]
+      var starredReposData: [Repository]
+        var userRepos: [Repository]
     }
     struct ApiError {
         var error: Error
       }
     struct ViewModel {
         var reposListData: [Repository]
+        var starredReposData: [Repository]
+        var userRepos: [Repository]
     }
   }
 }

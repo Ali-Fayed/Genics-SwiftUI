@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var isSettingsIconTapped = false
+    @State var isShareIconTapped = false
     var body: some View {
             NavigationView {
                     List {
@@ -99,6 +100,9 @@ struct ProfileView: View {
                 }.background(
                     NavigationLink(destination: SettingsView(),
                             isActive: $isSettingsIconTapped) {}
+                ).background(
+                    NavigationLink(destination: UserRepositoriesContentView().navigationTitle("Repositories"),
+                            isActive: $isShareIconTapped) {}
                 )
             }
         
@@ -107,6 +111,7 @@ struct ProfileView: View {
         self.isSettingsIconTapped = true
     }
     private func shareUser() {
+        self.isShareIconTapped = true
     }
 }
 

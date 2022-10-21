@@ -1,5 +1,5 @@
 //
-//  ReposViewContentView.swift
+//  UserReposContentView.swift
 //  Genics
 //
 //  Created by Ali Fixed on 21/10/2022.
@@ -7,15 +7,19 @@
 
 import Foundation
 import SwiftUI
-
-struct ReposViewContentView: View {
-  var body: some View {
-    ReposView().configureView()
-  }
+struct UserRepositoriesView: View {
+    var body: some View {
+        EmptyView()
+    }
 }
-extension ReposView {
+struct UserRepositoriesContentView: View {
+    var body: some View {
+        UserRepositoriesView().configureView()
+    }
+}
+extension UserRepositoriesView {
   func configureView() -> some View {
-    var view = self
+      var view = ReposView(viewType: .userOwnedRpos)
     let interactor = ReposViewInteractor()
     let presenter = ReposViewPresenter()
     view.interactor = interactor

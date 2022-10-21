@@ -19,7 +19,7 @@ class ReposViewPresenter: ReposViewPresentationLogic {
     }
     func presentReposListData(response: ReposModel.LoadReposList.ReposListResponse) {
     let viewModel = ReposModel.LoadReposList.ViewModel (
-        reposListData: response.reposListData
+        reposListData: response.reposListData, starredReposData: response.starredReposData, userRepos: response.userRepos
     )
     view?.displayReposList(viewModel: viewModel)
   }

@@ -60,7 +60,7 @@
 		68AF3D9A290077B500C49B94 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D99290077B500C49B94 /* UsersCell.swift */; };
 		68AF3D9E2900789900C49B94 /* ReposDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9D2900789900C49B94 /* ReposDetails.swift */; };
 		68AF3DA0290078CC00C49B94 /* OrgsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3D9F290078CC00C49B94 /* OrgsCell.swift */; };
-		68AF3DA32900795F00C49B94 /* StarredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3DA22900795F00C49B94 /* StarredView.swift */; };
+		68AF3DA32900795F00C49B94 /* StarredContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3DA22900795F00C49B94 /* StarredContentView.swift */; };
 		68AF3DA92900C4B100C49B94 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF3DA82900C4B100C49B94 /* HomeDataSource.swift */; };
 		68DF6F1629016F3500E02664 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F1529016F3500E02664 /* UsersInteractor.swift */; };
 		68DF6F1829016F3F00E02664 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F1729016F3F00E02664 /* UserPresenter.swift */; };
@@ -75,7 +75,8 @@
 		68DF6F372902C60900E02664 /* ReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F362902C60900E02664 /* ReposPresenter.swift */; };
 		68DF6F392902C61100E02664 /* ReposDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F382902C61100E02664 /* ReposDataSource.swift */; };
 		68DF6F3B2902C61900E02664 /* ReposViewDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F3A2902C61900E02664 /* ReposViewDisplay.swift */; };
-		68DF6F3D2902C62500E02664 /* ReposViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F3C2902C62500E02664 /* ReposViewContentView.swift */; };
+		68DF6F3D2902C62500E02664 /* ReposContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F3C2902C62500E02664 /* ReposContentView.swift */; };
+		68DF6F402902F71B00E02664 /* UserReposContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF6F3F2902F71B00E02664 /* UserReposContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +152,7 @@
 		68AF3D99290077B500C49B94 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		68AF3D9D2900789900C49B94 /* ReposDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDetails.swift; sourceTree = "<group>"; };
 		68AF3D9F290078CC00C49B94 /* OrgsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsCell.swift; sourceTree = "<group>"; };
-		68AF3DA22900795F00C49B94 /* StarredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredView.swift; sourceTree = "<group>"; };
+		68AF3DA22900795F00C49B94 /* StarredContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredContentView.swift; sourceTree = "<group>"; };
 		68AF3DA82900C4B100C49B94 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		68DF6F1529016F3500E02664 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
 		68DF6F1729016F3F00E02664 /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
@@ -166,7 +167,8 @@
 		68DF6F362902C60900E02664 /* ReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposPresenter.swift; sourceTree = "<group>"; };
 		68DF6F382902C61100E02664 /* ReposDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDataSource.swift; sourceTree = "<group>"; };
 		68DF6F3A2902C61900E02664 /* ReposViewDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewDisplay.swift; sourceTree = "<group>"; };
-		68DF6F3C2902C62500E02664 /* ReposViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewContentView.swift; sourceTree = "<group>"; };
+		68DF6F3C2902C62500E02664 /* ReposContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposContentView.swift; sourceTree = "<group>"; };
+		68DF6F3F2902F71B00E02664 /* UserReposContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,8 +377,7 @@
 			children = (
 				68AF3D56290026FB00C49B94 /* HomeView */,
 				68AF3D6F290042C000C49B94 /* UsersView */,
-				68AF3D70290042C700C49B94 /* ReposView */,
-				68AF3DA12900795400C49B94 /* StarredView */,
+				68AF3D70290042C700C49B94 /* ReposModule */,
 				68AF3D9C2900788E00C49B94 /* ReposDetails */,
 				68AF3D9B290077C700C49B94 /* CommonViews */,
 				68AF3D9429006B9000C49B94 /* UsersDetailsView */,
@@ -452,9 +453,10 @@
 			path = UsersView;
 			sourceTree = "<group>";
 		};
-		68AF3D70290042C700C49B94 /* ReposView */ = {
+		68AF3D70290042C700C49B94 /* ReposModule */ = {
 			isa = PBXGroup;
 			children = (
+				68DF6F412902F88D00E02664 /* ReposViews */,
 				68AF3D8829006A7600C49B94 /* ReposModel.swift */,
 				68AF3D7929004A7000C49B94 /* ReposView.swift */,
 				68AF3D8A29006A7D00C49B94 /* ReposViewInteractor.swift */,
@@ -462,9 +464,8 @@
 				68DF6F362902C60900E02664 /* ReposPresenter.swift */,
 				68DF6F382902C61100E02664 /* ReposDataSource.swift */,
 				68DF6F3A2902C61900E02664 /* ReposViewDisplay.swift */,
-				68DF6F3C2902C62500E02664 /* ReposViewContentView.swift */,
 			);
-			path = ReposView;
+			path = ReposModule;
 			sourceTree = "<group>";
 		};
 		68AF3D71290042CF00C49B94 /* IssuesView */ = {
@@ -521,14 +522,6 @@
 			path = ReposDetails;
 			sourceTree = "<group>";
 		};
-		68AF3DA12900795400C49B94 /* StarredView */ = {
-			isa = PBXGroup;
-			children = (
-				68AF3DA22900795F00C49B94 /* StarredView.swift */,
-			);
-			path = StarredView;
-			sourceTree = "<group>";
-		};
 		68DF6F1F2901767E00E02664 /* NetworkModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +552,16 @@
 				68DF6F262901820500E02664 /* AsyncImageModule.swift */,
 			);
 			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		68DF6F412902F88D00E02664 /* ReposViews */ = {
+			isa = PBXGroup;
+			children = (
+				68DF6F3C2902C62500E02664 /* ReposContentView.swift */,
+				68AF3DA22900795F00C49B94 /* StarredContentView.swift */,
+				68DF6F3F2902F71B00E02664 /* UserReposContentView.swift */,
+			);
+			path = ReposViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -716,7 +719,7 @@
 				68AF3CBD29001F1B00C49B94 /* Genics.xcdatamodeld in Sources */,
 				68AF3CBA29001F1B00C49B94 /* Persistence.swift in Sources */,
 				68AF3D39290020C700C49B94 /* RequestInterceptor.swift in Sources */,
-				68DF6F3D2902C62500E02664 /* ReposViewContentView.swift in Sources */,
+				68DF6F3D2902C62500E02664 /* ReposContentView.swift in Sources */,
 				68AF3D41290020C700C49B94 /* GitSecureStoreQueryable.swift in Sources */,
 				68DF6F392902C61100E02664 /* ReposDataSource.swift in Sources */,
 				68AF3D7E29004A8900C49B94 /* OrgsView.swift in Sources */,
@@ -741,9 +744,10 @@
 				68AF3D43290020C700C49B94 /* GitSecureStore.swift in Sources */,
 				68AF3D9329006AAA00C49B94 /* OrgsViewModel.swift in Sources */,
 				68DF6F332902C5E000E02664 /* Repository.swift in Sources */,
-				68AF3DA32900795F00C49B94 /* StarredView.swift in Sources */,
+				68AF3DA32900795F00C49B94 /* StarredContentView.swift in Sources */,
 				68AF3D9629006BA200C49B94 /* UsersDetailsView.swift in Sources */,
 				68AF3D9A290077B500C49B94 /* UsersCell.swift in Sources */,
+				68DF6F402902F71B00E02664 /* UserReposContentView.swift in Sources */,
 				68AF3D44290020C700C49B94 /* Constants.swift in Sources */,
 				68AF3D3B290020C700C49B94 /* NetworkingManger.swift in Sources */,
 				68AF3D8D29006A8900C49B94 /* IssuesModel.swift in Sources */,

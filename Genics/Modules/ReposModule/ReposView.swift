@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReposView: View {
+    let viewType: ReposListType
     @ObservedObject var dataSource = ReposViewDataSource()
     var interactor: ReposViewViewBusinessLogic?
     @Environment(\.managedObjectContext) private var viewContext
@@ -15,19 +16,32 @@ struct ReposView: View {
     @State var isDataLoaded = false
     @State var searchText = ""
     var body: some View {
-        if isDataLoaded { reposList() } else { progressView() }
-    }
-    func reposList() -> some View {
-        return List {
-            ForEach(dataSource.reposList, id: \.self) { repo in
-                NavigationLink(destination: ReposDetails()){
-                    ReposListCell(userAvatar: repo.repoOwnerAvatarURL, userName: repo.repositoryName, repoName: repo.repositoryName, repoDescription: repo.repositoryDescription ?? "", repoStarsCount: "\(repo.repositoryStars ?? 1)", repoLanguage: repo.repositoryLanguage ?? "", repoLanguageCircleColor: "red")
-                }
+        if isDataLoaded {
+            if viewType == .publicRepos {
+                repoListWithSearch()
+            } else if viewType == .userStarredRepos {
+                reposList()
+            } else if viewType == .userOwnedRpos {
+                reposList()
             }
-        }.searchable(text: $searchText, prompt: "Search").navigationTitle("Repositories")
+        } else {
+            progressView()
+        }
+    }
+    func repoListWithSearch() -> some View {
+        reposList().searchable(text: $searchText, prompt: "Search")
             .onChange(of: searchText) { _ in
                 performSearch()
             }
+    }
+    func reposList() -> some View {
+        return List {
+            ForEach(dataSource.reposModel(reposViewType: viewType), id: \.self) { repo in
+                NavigationLink(destination: ReposDetails()){
+                    ReposListCell(userAvatar: repo.repoOwnerAvatarURL, userName: repo.repoOwnerName, repoName: repo.repositoryName, repoDescription: repo.repositoryDescription ?? "", repoStarsCount: "\(repo.repositoryStars ?? 1)", repoLanguage: repo.repositoryLanguage ?? "", repoLanguageCircleColor: "red")
+                }
+            }
+        }
     }
     func progressView() -> some View {
         return ProgressView().padding(.bottom, 60)
@@ -58,9 +72,6 @@ struct ReposView: View {
 }
 struct ReposView_Previews: PreviewProvider {
     static var previews: some View {
-        ReposView()
+        ReposView(viewType: .publicRepos)
     }
-}
-class UserViewModel: ObservableObject {
-    var users = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3"]
 }

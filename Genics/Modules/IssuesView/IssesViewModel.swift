@@ -9,3 +9,6 @@ import Foundation
 class IssesViewModel: ObservableObject {
     var issues = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3"]
 }
+class UserViewModel: ObservableObject {
+    var users = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3"]
+}
