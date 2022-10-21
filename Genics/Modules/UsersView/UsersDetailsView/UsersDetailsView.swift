@@ -10,8 +10,15 @@ import SwiftUI
 struct UsersDetailsView: View {
     @Environment(\.managedObjectContext) private var viewContext
     let item: User
+    @ObservedObject var dataSource = ProfileDataSource()
     var body: some View {
-        Text("here details about \(item.userName)").toolbar {
+        List {
+            Section {
+                profileListItems()
+            } header: {
+                profileViewHeader(userName: item.userName, userFullName: item.userName, userAvatar: item.userAvatar, userFollowing: "2", userFollowers: "16")
+            }
+        }.navigationTitle("User Details").toolbar {
             ToolbarItem {
                 Button {
                     addItem(userName: item.userName, avatarName: item.userAvatar)
@@ -25,6 +32,29 @@ struct UsersDetailsView: View {
                 }
             }
         }
+    }
+    private func profileListItems() -> some View {
+        return ForEach(Array(dataSource.profileData), id: \.self) { item in
+            HStack(spacing: 10) {
+                Image(item.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .cornerRadius(10, corners: .allCorners)
+                    .padding(.leading, -10)
+                Text(item.title)
+                if item.id == 0 {
+                    Spacer()
+                    NavigationLink(destination: UserRepositoriesContentView().navigationTitle("Repository")) {}.frame(width: 10)
+                } else if item.id == 1 {
+                    Spacer()
+                    NavigationLink(destination: StarredViewContentView().navigationTitle("Starred")) {}.frame(width: 10)
+                }  else if item.id == 2 {
+                    Spacer()
+                    NavigationLink(destination: OrgsView()) {}.frame(width: 10)
+                }
+            }
+        }.padding(7)
     }
     private func shareUser() {
     }
@@ -44,7 +74,7 @@ struct UsersDetailsView: View {
 }
 struct UsersDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        UsersDetailsView(item: User(userName: "", userAvatar: ""))
+        UsersDetailsView(item: User(userName: "", userURL: "", userAvatar: "", userFollowing: "", userFollowers: ""))
     }
 }
 struct collectionView: View {

@@ -16,7 +16,7 @@ class UsersViewDataSource: ObservableObject {
 extension UsersViewDataSource {
   static var sample: UsersViewDataSource {
     let model = UsersViewDataSource()
-      model.usersList = [.init(userName: "Ali", userAvatar: "ali")]
+//      model.usersList = [.init(userName: "Ali", userAvatar: "ali")]
     return model
   }
 }
