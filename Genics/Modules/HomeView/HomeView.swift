@@ -86,7 +86,7 @@ struct HomeView: View {
                     if item.id == 0 {
                         NavigationLink(destination: UsersViewContentView()) {}
                     } else if item.id == 1 {
-                        NavigationLink(destination: ReposView()) {}
+                        NavigationLink(destination: ReposViewContentView()) {}
                     } else if item.id == 2 {
                         NavigationLink(destination: IssuesView()) {}
                     } else if item.id == 3 {

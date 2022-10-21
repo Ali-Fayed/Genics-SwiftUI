@@ -19,42 +19,40 @@ struct ReposListCell: View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Image(userAvatar)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                        .cornerRadius(10, corners: .allCorners)
+                    AsyncImage(url: URL(string: userAvatar)!,
+                                  placeholder: { ProgressView() },
+                                  image: { Image(uiImage: $0).resizable() })
+                    .frame(width: 30, height: 30)
+                    .cornerRadius(25, corners: .allCorners)
                      Text(userName)
+                        .font(.system(size: 15, weight: .medium))
                         .padding(2)
                 }
                 Text(repoName)
                     .padding(1)
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 19, weight: .bold))
                 Text(repoDescription)
+                    .font(.system(size: 14, weight: .medium))
                     .padding(1)
                 HStack(spacing: 10) {
                     HStack(spacing: 2) {
-                        Image("fav_star")
-                            .resizable()
+                        Image(systemName: "star.fill").foregroundColor(.gray)
                             .scaledToFit()
                             .frame(width: 20, height: 20)
-                            .cornerRadius(10, corners: .allCorners)
-                        Text(repoStarsCount)
+                        Text(repoStarsCount).foregroundColor(.gray).font(.system(size: 15, weight: .medium))
                             .padding(1)
                     }
                     HStack(spacing: 2) {
-                        Image(repoLanguageCircleColor)
-                            .resizable()
+                        Image(systemName: "circle.fill")
                             .scaledToFit()
                             .frame(width: 20, height: 20)
-                            .cornerRadius(10, corners: .allCorners)
-                        Text(repoLanguage)
+                            .foregroundColor(Color.random())
+                        Text(repoLanguage).font(.system(size: 15, weight: .medium))
+
                             .padding(1)
                     }
                 }
             }
-            Spacer()
-            NavigationLink(destination: ReposDetails()){}.frame(width: 10)
         }
     }
 }

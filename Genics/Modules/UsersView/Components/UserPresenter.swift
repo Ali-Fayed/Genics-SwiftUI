@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 
 protocol UsersViewPresentationLogic {
   func presentUsersListData(response: UsersModel.LoadUsersList.UsersListResponse)

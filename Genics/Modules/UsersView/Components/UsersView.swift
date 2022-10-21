@@ -49,7 +49,7 @@ extension UsersView {
                     self.isDataLoaded = true
                 }
             }.alert(isPresented: $dataSource.isShowingAlert) {
-                presentAlert(title: "Error", message: dataSource.apiError?.localizedDescription ?? "")
+                presentAlert(title: "Error", message: dataSource.apiError?.localizedDescription.debugDescription ?? "")
             }
     }
     func performSearch() {

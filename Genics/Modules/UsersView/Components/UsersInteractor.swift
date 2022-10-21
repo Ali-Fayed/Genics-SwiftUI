@@ -19,11 +19,11 @@ class UsersViewInteractor: UsersViewBusinessLogic {
     func loadUsersList(request: UsersModel.LoadUsersList.Request, requestValues: UsersListRequestValue) {
         Task {
             do {
-                let users = try await useCase.fetchUsers(requestValues: requestValues)
-                let topUsers = try await useCase.fetchTopUsers()
-                let response = UsersModel.LoadUsersList.UsersListResponse(usersListData: users, topUsersData: topUsers)
+                let usersList = try await useCase.fetchUsers(usersListRequestValue: requestValues)
+                let topUsersList = try await useCase.fetchTopUsers()
+                let response = UsersModel.LoadUsersList.UsersListResponse(usersListData: usersList, topUsersData: topUsersList)
                 self.presenter?.presentUsersListData(response: response)
-            } catch {
+            } catch let error {
                 let error = UsersModel.LoadUsersList.ApiError(error: error)
                 self.presenter?.presentUsersListError(response: error)
             }

@@ -6,3 +6,18 @@
 //
 
 import Foundation
+enum ReposModel {
+  enum LoadReposList {
+    struct Request {}
+
+    struct ReposListResponse {
+      var reposListData: [Repository]
+    }
+    struct ApiError {
+        var error: Error
+      }
+    struct ViewModel {
+        var reposListData: [Repository]
+    }
+  }
+}
